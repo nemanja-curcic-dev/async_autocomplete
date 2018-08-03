@@ -1,5 +1,5 @@
 # routes.py
-from api.views.views import autocomplete, update_trie
+from views.views import autocomplete, update_trie
 
 
 def setup_routes(app):

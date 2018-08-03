@@ -1,6 +1,6 @@
 from aiohttp import web
 import json
-from ..logic.my_trie_dict import TrieDictWrapper
+from logic.my_trie_dict import TrieDictWrapper
 
 trie_dict_wrapper = TrieDictWrapper()
 trie_dict_wrapper.init_trie()
