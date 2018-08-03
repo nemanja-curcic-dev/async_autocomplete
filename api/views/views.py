@@ -17,7 +17,8 @@ async def autocomplete(request):
 
 async def update_trie(request):
     resp = await request.json()
-    print(resp)
+    trie_dict_wrapper.add_to_trie(resp)
+
     return web.Response(body=json.dumps({'updated': True}),
                         headers={'Content-Type': 'application/json'},
                         status=200)

@@ -61,9 +61,12 @@ class TrieDictWrapper:
         hotel = re.sub(city, '', hotel)
         return city + hotel
 
-    def add_to_trie(self, key, val):
+    def add_to_trie(self, d):
         """Add new item to trie"""
-        self.trie.__setitem__(key, val)
+
+        for key, val in d.items():
+            self.trie.__setitem__(key, val)
+            print(key, val)
 
     def get_items(self, search):
         if search == '':
