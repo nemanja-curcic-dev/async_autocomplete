@@ -34,7 +34,10 @@ class TrieDictWrapper:
                 key = re.sub('\s+', '', key)
                 row.pop('id', None)
                 row.pop('timeStampAdded', None)
-                row.pop('country', None)
+
+                if row['type'] != 'zip':
+                    row.pop('country', None)
+
                 row.pop('index_country', None)
                 self.d[key] = row
 
