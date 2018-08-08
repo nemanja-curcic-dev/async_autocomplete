@@ -72,6 +72,9 @@ class TrieDictWrapper:
             print(key, val)
 
     def get_items(self, search):
+        if len(search) < 3:
+            return []
+
         if search == '':
             return []
 
