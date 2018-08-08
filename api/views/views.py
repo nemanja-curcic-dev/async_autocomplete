@@ -11,7 +11,7 @@ async def autocomplete(request):
 
     return web.Response(body=json.dumps(resp_body),
                         headers={'Content-Type': 'application/json',
-                                 'Access-Control-Allow-Origin:': '*'},
+                                 'Access-Control-Allow-Origin': '*'},
                         status=200)
 
 
