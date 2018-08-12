@@ -78,7 +78,7 @@ class TrieDictWrapper:
         if search == '':
             return []
 
-        search = re.sub('\s+', '', search)
+        search = re.sub('\s+', '', search).lower()
 
         items = self.trie.items(prefix=search)
 
