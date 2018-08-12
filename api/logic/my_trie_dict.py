@@ -87,4 +87,4 @@ class TrieDictWrapper:
         others = list(filter(lambda x: True if x[1]['type'] != 'city' else False, items))
         cities.sort(key=lambda x: len(x[1]['name']))
 
-        return [item[1] for item in cities] + [item[1] for item in others][:15]
+        return list(set([item[1] for item in cities])) + [item[1] for item in others][:15]
